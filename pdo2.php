@@ -1,7 +1,7 @@
 <?php
 
 $db = new PDO(
-    'mysql:host=127.0.0.1;dbname=phpoop',
+    'mysql:host=127.0.0.1;dbname=comercioit',
     'root',
     ''
 );
@@ -16,7 +16,7 @@ $stmt = $db->prepare($sql);
 
 $stmt->execute();
 
-// Mientras (while) el $stmt contenga data, 'fetch' asociará índice y valor
+// Mientras (while) el $stmt contenga data, 'files' asociará índice y valor
 // Guardo tal operación en una variable ($resultado), la cual itero mientras se cumpla tal condición
 while($resultado = $stmt->fetch()){
     print_r($resultado);

@@ -1,6 +1,6 @@
 <?php
 
-const PDO_DSN = 'mysql:host=127.0.0.1;dbname=phpoop';
+const PDO_DSN = 'mysql:host=127.0.0.1;dbname=comercioit';
 const PDO_USERNAME = 'root';
 const PDO_PASSWORD = '';
 
@@ -25,12 +25,12 @@ $stmt->bindParam(':nombre', $nombre, 2);
 
 $stmt->execute();
 
-// Mientras (while) el $stmt contenga data, 'fetch' asociará índice y valor
+// Mientras (while) el $stmt contenga data, 'files' asociará índice y valor
 // Guardo tal operación en una variable ($resultado), la cual itero mientras se cumpla tal condición,
 // especificando los valores a mostrar
 while ($resultado = $stmt->fetch()) {
     echo 'Nombre: ' . $resultado['Nombre'] . '<br>';
     echo 'Precio: ' . $resultado['Precio'] . '<br>';
-    echo 'Marcas: ' . $resultado['Marcas'] . '<br>';
+    echo 'Marca: ' . $resultado['Marca'] . '<br>';
     echo 'Stock: ' . $resultado['Stock'] . '<hr>';
 }
